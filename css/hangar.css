@@ -1,0 +1,328 @@
+/* Reset y fuente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.hangar-link {
+  color: #000000;
+  font-weight: bold;
+  margin-left: auto;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0ff;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.hangar-link:hover {
+  background-color: #00cccc;
+}
+
+/* Main container */
+main {
+  flex: 1;
+  padding: 100px 2rem 2rem 2rem; /* padding top para navbar */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.config-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.system-settings,
+.battle-config {
+  flex: 1;
+  min-width: 300px;
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.system-settings h2,
+.battle-config h2 {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+
+/* Primer bloque: selección */
+.seleccion-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Cada sección (nave y empresa) */
+.seleccion-block {
+  background: #111;
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px #0ff44a33;
+}
+
+/* Título */
+.seleccion-block h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #0ff;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Contenedor de imagen y descripción */
+.img-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Imágenes y gifs */
+.img-desc img {
+  width: 250px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #222;
+  box-shadow: 0 0 15px #0ff;
+}
+
+/* Descripción debajo de la imagen */
+.descripcion {
+  background: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #0ff;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  height: 110px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* Flechas para cambiar opción */
+.selector-flechas {
+  margin: 1rem 0 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.selector-flechas button {
+  cursor: pointer;
+  background: #0ff;
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  padding: 0.25rem 0.7rem;
+  transition: background-color 0.3s;
+}
+
+.selector-flechas button:hover {
+  background: #00cccc;
+}
+
+/* Segundo bloque: ajustes y stats */
+.ajustes-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Ajustes y sistema */
+.ajustes, .sistema {
+  background: #111;
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1 1 350px;
+  box-shadow: 0 0 10px #0ff44a33;
+}
+
+/* Títulos en ajustes y sistema */
+.ajustes h2, .sistema h2 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0ff;
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* Sliders y checkbox container */
+.control-group {
+  margin-bottom: 1rem;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #0ff;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+}
+
+.control-group input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+  vertical-align: middle;
+}
+
+/* Stats sliders con valores */
+.stat-slider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-slider label {
+  flex: 1;
+}
+
+.stat-slider input[type="range"] {
+  flex: 3;
+}
+
+.stat-slider .valor {
+  flex: 0.6;
+  text-align: right;
+  color: #0ff;
+  font-weight: 700;
+  user-select: none;
+}
+
+/* Botón despegar */
+#despegar-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  background-color: #0ff;
+  border: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.75rem 3rem;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #0ff;
+  transition: background-color 0.3s ease;
+}
+
+#despegar-btn:hover {
+  background-color: #00cccc;
+}
+
+/* Pantalla de carga */
+#pantalla-carga {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  color: #0ff;
+  font-size: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Animación de carga */
+@keyframes carga-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.carga-anim {
+  border: 8px solid #0ff44a33;
+  border-top: 8px solid #0ff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: carga-spin 1.5s linear infinite;
+}
+
+/* Scroll para descripciones si se hacen largas */
+.descripcion::-webkit-scrollbar {
+  width: 6px;
+}
+.descripcion::-webkit-scrollbar-thumb {
+  background-color: #0ff;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .seleccion-container, .ajustes-container {
+    flex-direction: column;
+  }
+  
+  .seleccion-block, .ajustes, .sistema {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+  
+  .img-desc img {
+    width: 100%;
+    height: auto;
+  }
+}

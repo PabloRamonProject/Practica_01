@@ -166,6 +166,8 @@ body.light-theme select {
   overflow-x: auto;
   gap: 1rem;
   padding: 1rem 0;
+  object-fit: cover;
+  height: 400px;
 }
 
 .media-slider img {
