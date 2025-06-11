@@ -35,17 +35,55 @@
     </div>
   </section>
 
-  <!-- Sección 2: Ajustes Rápidos -->
-  <section id="ajustes-rapidos">
-    <h2>Ajustes Rápidos</h2>
-    <form id="form-ajustes">
-      <label for="volumen">Volumen del Juego</label>
-      <input type="range" id="volumen" name="volumen" min="0" max="100">
+  <!-- Sección 1: Selección de Nave -->
+  <section id="seleccion-nave">
+    <h2>Selecciona tu Nave</h2>
+    <div class="nave-selector">
+      <button id="flecha-izquierda" aria-label="Nave anterior">&#9664;</button>
 
-      <label for="efectos">
-        <input type="checkbox" id="efectos" name="efectos" checked>
-        Mostrar efectos visuales
-      </label>
+      <div class="nave-display">
+        <img id="gif-nave" src="img/nave2.gif" alt="GIF nave Spectrum" />
+        <h3 id="nombre-nave">Spectrum</h3>
+        <p id="descripcion-nave">Nave rápida y ágil, ideal para misiones de exploración.</p>
+      </div>
+
+      <button id="flecha-derecha" aria-label="Nave siguiente">&#9654;</button>
+    </div>
+  </section>
+
+  <!-- Sección: Ajustes -->
+  <section id="ajustes">
+    <h2>Configuración Gráfica</h2>
+    <form id="form-ajustes" class="ajustes-form">
+      <div class="ajuste-item">
+        <label for="minimapa">Minimapa</label>
+        <input type="checkbox" id="minimapa" checked>
+      </div>
+
+      <div class="ajuste-item">
+        <label for="luces">Luces dinámicas</label>
+        <input type="checkbox" id="luces">
+      </div>
+
+      <div class="ajuste-item">
+        <label for="sombras">Sombras</label>
+        <input type="checkbox" id="sombras" checked>
+      </div>
+
+      <div class="ajuste-item">
+        <label for="antialiasing">Antialiasing</label>
+        <input type="checkbox" id="antialiasing">
+      </div>
+
+      <div class="ajuste-item">
+        <label for="calidad">Calidad gráfica</label>
+        <select id="calidad">
+          <option value="baja">Baja</option>
+          <option value="media" selected>Media</option>
+          <option value="alta">Alta</option>
+          <option value="ultra">Ultra</option>
+        </select>
+      </div>
     </form>
   </section>
   

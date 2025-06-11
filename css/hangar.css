@@ -170,3 +170,87 @@ footer {
   box-shadow: 0 0 15px #00aaff;
   background-color: #0b0f18; /* fondo para que la imagen resalte */
 }
+
+/* Contenedor de selección de nave */
+#seleccion-nave {
+  background-color: #121a2b; /* mismo fondo oscuro que otras secciones */
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #004d99;
+  text-align: center;
+}
+
+/* Título */
+#seleccion-nave h2 {
+  color: #00aaff;
+  text-shadow: 0 0 8px #00aaff;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor flex para flechas y nave */
+.nave-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Botones de flecha */
+.nave-selector button {
+  background-color: #0a1c36;
+  border: 2px solid #00aaff;
+  color: #00aaff;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00aaff;
+  user-select: none;
+}
+
+.nave-selector button:hover,
+.nave-selector button:focus {
+  background-color: #00aaff;
+  color: #0b0f18;
+  box-shadow: 0 0 15px #00d4ff;
+  outline: none;
+}
+
+/* Contenedor de la nave y descripción */
+.nave-display {
+  max-width: 400px;
+  text-align: center;
+  color: #c0d9f9;
+  user-select: none;
+}
+
+/* GIF de la nave */
+.nave-display img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00aaff;
+  margin-bottom: 1rem;
+}
+
+/* Nombre de la nave */
+#nombre-nave {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00aaff;
+  text-shadow: 0 0 8px #00aaff;
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción de la nave */
+#descripcion-nave {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #a0c8ff;
+  text-shadow: 0 0 4px #005b99;
+}
