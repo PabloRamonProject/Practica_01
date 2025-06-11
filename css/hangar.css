@@ -313,24 +313,30 @@ footer {
 
 /* Pantalla negra que cubre toda la ventana */
 .pantalla-carga {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  gap: 20px;  
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: rgba(0,0,0,0.9);  
   z-index: 9999;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+  
+  /* Empezamos fuera de pantalla, abajo */
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
 }
 
-/* Oculto con opacidad 0 y pointer-events none */
-.oculto {
-  opacity: 0;
-  pointer-events: none;
+.pantalla-carga.activa {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Simbolo de carga: spinner simple */
@@ -346,4 +352,16 @@ footer {
 @keyframes girar {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.mensaje-carga {
+  color: #0f9;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif; /* si quieres fuente futurista */
+  text-shadow: 0 0 8px #0f9, 0 0 15px #0f9;
+  user-select: none;
+  text-align: center;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }

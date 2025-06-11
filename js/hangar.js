@@ -80,12 +80,12 @@ $(document).ready(function() {
   document.getElementById("btnSalto").addEventListener("click", () => {
     const pantalla = document.getElementById("pantallaCarga");
 
-    // Mostrar pantalla de carga
-    pantalla.classList.remove("oculto");
+    // Mostrar pantalla de carga deslizando hacia arriba
+    pantalla.classList.add("activa");
 
-    // Opcional: después de 3 segundos ocultar la pantalla (simulando fin de carga)
+    // Después de 3 segundos, ocultar con animación de abajo a arriba
     setTimeout(() => {
-      pantalla.classList.add("oculto");
+      pantalla.classList.remove("activa");
     }, 3000);
   });
   
