@@ -10,7 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <script defer src="js/hangar.js"></script>
 </head>
+
+
+
 <body>
+
+  <audio controls>
+    <source src="audio/musica.mp3" type="audio/mpeg">
+  </audio>
+
   <!-- Barra de navegación fija -->
   <header id="inicio">
     <nav class="navbar">
@@ -53,40 +61,85 @@
 
   <!-- Sección: Ajustes -->
   <section id="ajustes">
-    <h2>Configuración Gráfica</h2>
-    <form id="form-ajustes" class="ajustes-form">
-      <div class="ajuste-item">
-        <label for="minimapa">Minimapa</label>
-        <input type="checkbox" id="minimapa" checked>
+    <h2>Configuración del Juego</h2>
+    <div class="ajustes-contenedor">
+      <!-- Columna: Gráfica -->
+      <div class="columna-ajuste">
+        <h3>Gráfica</h3>
+        <form class="ajustes-form">
+          <div class="ajuste-item">
+            <label for="minimapa">Minimapa</label>
+            <input type="checkbox" id="minimapa" checked>
+          </div>
+
+          <div class="ajuste-item">
+            <label for="luces">Luces dinámicas</label>
+            <input type="checkbox" id="luces">
+          </div>
+
+          <div class="ajuste-item">
+            <label for="sombras">Sombras</label>
+            <input type="checkbox" id="sombras" checked>
+          </div>
+
+          <div class="ajuste-item">
+            <label for="antialiasing">Antialiasing</label>
+            <input type="checkbox" id="antialiasing">
+          </div>
+
+          <div class="ajuste-item">
+            <label for="calidad">Calidad gráfica</label>
+            <select id="calidad">
+              <option value="baja">Baja</option>
+              <option value="media" selected>Media</option>
+              <option value="alta">Alta</option>
+              <option value="ultra">Ultra</option>
+            </select>
+          </div>
+        </form>
       </div>
 
-      <div class="ajuste-item">
-        <label for="luces">Luces dinámicas</label>
-        <input type="checkbox" id="luces">
-      </div>
+      <!-- Columna: Sonido -->
+      <div class="columna-ajuste">
+        <h3>Sonido</h3>
+        <form class="ajustes-form">
+          <div class="ajuste-item">
+            <label for="musica">Música</label>
+            <input type="checkbox" id="musica" checked>
+          </div>
 
-      <div class="ajuste-item">
-        <label for="sombras">Sombras</label>
-        <input type="checkbox" id="sombras" checked>
-      </div>
+          <div class="ajuste-item">
+            <label for="fx">Efectos de sonido</label>
+            <input type="checkbox" id="fx" checked>
+          </div>
 
-      <div class="ajuste-item">
-        <label for="antialiasing">Antialiasing</label>
-        <input type="checkbox" id="antialiasing">
-      </div>
+          <div class="ajuste-item">
+            <label for="volumen-general">Volumen general</label>
+            <input type="range" id="volumen-general" min="0" max="100" value="70">
+          </div>
 
-      <div class="ajuste-item">
-        <label for="calidad">Calidad gráfica</label>
-        <select id="calidad">
-          <option value="baja">Baja</option>
-          <option value="media" selected>Media</option>
-          <option value="alta">Alta</option>
-          <option value="ultra">Ultra</option>
-        </select>
+          <div class="ajuste-item">
+            <label for="volumen-musica">Volumen música</label>
+            <input type="range" id="volumen-musica" min="0" max="100" value="50">
+          </div>
+
+          <div class="ajuste-item">
+            <label for="volumen-fx">Volumen FX</label>
+            <input type="range" id="volumen-fx" min="0" max="100" value="60">
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </section>
   
+  <section class="salto-espacial">
+    <button id="btnSalto">Salto Espacial</button>
+  </section>
+
+  <!-- Pantalla negra de carga superpuesta -->
+  <div id="pantallaCarga" class="pantalla-carga oculto">
+    <div class="simbolo-carga"></div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Dark Orbit. Todos los derechos reservados.</p>

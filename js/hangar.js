@@ -76,4 +76,17 @@ $(document).ready(function() {
 
   // Inicializar con la primera nave
   actualizarNave();
+
+  document.getElementById("btnSalto").addEventListener("click", () => {
+    const pantalla = document.getElementById("pantallaCarga");
+
+    // Mostrar pantalla de carga
+    pantalla.classList.remove("oculto");
+
+    // Opcional: después de 3 segundos ocultar la pantalla (simulando fin de carga)
+    setTimeout(() => {
+      pantalla.classList.add("oculto");
+    }, 3000);
+  });
+  
 });
