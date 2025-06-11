@@ -17,9 +17,9 @@ $(document).ready(function() {
 
   // Mostrar imagen al hacer hover sobre botón de facción
   const faccionImages = {
-    'MMO': 'img/facciones/mmo.png',
-    'EIC': 'img/facciones/eic.png',
-    'VRU': 'img/facciones/vru.png'
+    'MMO': 'img/Marte.jpg',
+    'EIC': 'img/Tierra.jpg',
+    'VRU': 'img/Venus.jpg'
   };
 
   $('.btn-faccion').on('mouseenter', function() {
