@@ -2,122 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hangar - Dark Galaxy</title>
-  <link rel="stylesheet" href="css/hangar.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Galaxy - Únete a la Beta</title>
+  <link rel="stylesheet" href="css/hangar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  
 </head>
 <body>
-    <!-- Barra de navegación fija -->
+  <!-- Barra de navegación fija -->
   <header id="inicio">
     <nav class="navbar">
-      <div class="navbar-left">
-        <a href="#inicio" class="logo">
-          <img src="img/logo.png" alt="Dark Galaxy Logo" class="logo-img">
-        </a>
-      </div>
-      <div class="navbar-right">
-        <a href="index.html" class="hangar-link">Inicio</a>
-      </div>
+      <div class="logo">
+        <a href="index.html">
+         <img src="img/logo.png"  alt="Dark Galaxy Logo" class="logo-img">
     </nav>
   </header>
-
-  <!-- 🧩 Cuerpo Principal -->
-      <main class="main-container">
-        <!-- 🔹 Sección 1: Selección de nave y empresa -->
-        <section class="seleccion-container">
-      <!-- Selección de nave -->
-      <div class="seleccion-block" id="nave-section">
-        <h2>Selecciona tu Nave</h2>
-        <div class="img-desc">
-          <img id="nave-img" src="img/nave1.gif" alt="Nave">
-          <div class="descripcion" id="nave-descripcion">
-            <!-- Descripción dinámica -->
-          </div>
-        </div>
-        <div class="selector-flechas">
-          <button onclick="cambiarNave(-1)">←</button>
-          <button onclick="cambiarNave(1)">→</button>
-        </div>
-      </div>
-
-      <!-- Selección de empresa -->
-      <div class="seleccion-block" id="empresa-section">
-        <h2>Selecciona tu Empresa</h2>
-        <div class="img-desc">
-          <img id="empresa-img" src="img/venus.png" alt="Empresa">
-          <div class="descripcion" id="empresa-descripcion">
-            <!-- Descripción dinámica -->
-          </div>
-        </div>
-        <div class="selector-flechas">
-          <button onclick="cambiarEmpresa(-1)">←</button>
-          <button onclick="cambiarEmpresa(1)">→</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- 🔸 Sección 2: Configuración -->
-        <section class="config-section">
-      <!-- Ajustes de sistema -->
-      <div class="system-settings">
-        <h2>Ajustes del sistema</h2>
-        <label>
-          Volumen:
-          <input type="range" min="0" max="100" value="50" id="volume">
-        </label>
-        <label>
-          Mostrar minimapa:
-          <input type="checkbox" id="minimap">
-        </label>
-        <label>
-          Activar sonido:
-          <input type="checkbox" id="sound">
-        </label>
-        <!-- Puedes añadir más sliders/checkboxes aquí -->
-      </div>
-
-      <!-- Configuración de daño, escudo y velocidad -->
-      <div class="battle-config">
-        <h2>Distribución de energía</h2>
-        <label>
-          Daño:
-          <input type="range" id="damage" min="0" max="100" value="33">
-        </label>
-        <label>
-          Velocidad:
-          <input type="range" id="speed" min="0" max="100" value="33">
-        </label>
-        <label>
-          Escudo:
-          <input type="range" id="shield" min="0" max="100" value="34">
-        </label>
-      </div>
-    </section>
-
-
-    <!-- 🚀 Botón de Despegue -->
-    <div class="despegar-container">
-      <button id="despegar-btn">🚀 Despegar</button>
+  
+    <!-- Sección 1: Selección de Facción -->
+  <section id="seleccion-faccion">
+    <h2>Selecciona tu Facción</h2>
+    <div class="faccion-buttons">
+      <button class="btn-faccion" data-faccion="MMO">MMO</button>
+      <button class="btn-faccion" data-faccion="EIC">EIC</button>
+      <button class="btn-faccion" data-faccion="VRU">VRU</button>
     </div>
+  </section>
 
-    <!-- Pantalla de carga -->
-    <div id="pantalla-carga" class="pantalla-carga hidden">
-      <p>Iniciando salto hiperespacial...</p>
-      <div class="loader"></div>
-    </div>
-  </main>
+  <!-- Sección 2: Ajustes Rápidos -->
+  <section id="ajustes-rapidos">
+    <h2>Ajustes Rápidos</h2>
+    <form id="form-ajustes">
+      <label for="volumen">Volumen del Juego</label>
+      <input type="range" id="volumen" name="volumen" min="0" max="100">
 
-  <!-- 📌 Footer -->
+      <label for="efectos">
+        <input type="checkbox" id="efectos" name="efectos" checked>
+        Mostrar efectos visuales
+      </label>
+    </form>
+  </section>
+  
+
   <footer>
-    <p>© 2025 Dark Galaxy - Todos los derechos reservados</p>
+    <p>&copy; 2025 Dark Orbit. Todos los derechos reservados.</p>
   </footer>
-
-  <!-- 🎵 Audio -->
-  <audio id="musica-fondo" loop autoplay>
-    <source src="audio/fondo.mp3" type="audio/mp3">
-  </audio>
-
-  <!-- 📜 Script -->
-  <script src="js/hangar.js"></script>
+  
 </body>
 </html>
