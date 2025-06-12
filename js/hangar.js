@@ -3,15 +3,15 @@ $(document).ready(function() {
   $('.btn-faccion').on('click', function() {
     const faccion = $(this).data('faccion');
 
-    // Resetear background
+    // Resetear fondo
     $('body').css('background-color', '');
 
     if (faccion === 'VRU') {
-      $('body').css('background-color', '#013300');  // verde muy oscuro
+      $('body').css('background-color', '#013300');  
     } else if (faccion === 'MMO') {
-      $('body').css('background-color', '#4b0000');  // rojo muy oscuro
+      $('body').css('background-color', '#4b0000');  
     } else if (faccion === 'EIC') {
-      $('body').css('background-color', '#001933');  // azul muy oscuro
+      $('body').css('background-color', '#001933');  
     }
   });
 
@@ -74,7 +74,7 @@ $(document).ready(function() {
     actualizarNave();
   });
 
-  // Inicializar con la primera nave
+  
   actualizarNave();
 
   document.getElementById("btnSalto").addEventListener("click", () => {

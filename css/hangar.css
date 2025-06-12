@@ -1,4 +1,4 @@
-/* Reset y base */
+/* base */
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: #0b0f18; /* Azul muy oscuro */
-  color: #c0d9f9; /* Azul claro para texto */
+  background-color: #0b0f18; 
+  color: #c0d9f9; 
   line-height: 1.6;
   padding: 20px;
 }
 
-/* Navbar */
+/* Menu */
 .navbar {
   background-color: #050814;
   padding: 1rem 2rem;
@@ -28,7 +28,7 @@ body {
 
 /* Secciones */
 section {
-  background-color: #121a2b; /* Azul oscuro */
+  background-color: #121a2b; 
   padding: 2rem;
   max-width: 900px;
   margin: 2rem auto;
@@ -74,7 +74,7 @@ section h2 {
   outline: none;
 }
 
-/* Formulario ajustes */
+
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -168,12 +168,12 @@ footer {
   border: 2px solid #00aaff;
   border-radius: 12px;
   box-shadow: 0 0 15px #00aaff;
-  background-color: #0b0f18; /* fondo para que la imagen resalte */
+  background-color: #0b0f18; 
 }
 
-/* Contenedor de selección de nave */
+
 #seleccion-nave {
-  background-color: #121a2b; /* mismo fondo oscuro que otras secciones */
+  background-color: #121a2b; 
   padding: 2rem;
   max-width: 900px;
   margin: 2rem auto;
@@ -261,10 +261,10 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-  flex-wrap: nowrap; /* Evita que salten a nueva línea en desktop */
+  flex-wrap: nowrap; 
 }
 
-/* Cada columna toma el 50% del contenedor menos el gap */
+
 .columna-ajuste {
   flex: 1;
   min-width: 0;
@@ -279,12 +279,12 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 200px; /* Ajusta altura a tu gusto */
-  background-color: #111; /* Fondo oscuro para que combine con la estética */
+  height: 200px; 
+  background-color: #111;
   border: 2px solid #333;
   border-radius: 10px;
   margin: 20px auto;
-  width: 300px; /* ancho fijo para carta */
+  width: 300px;
   color: #eee;
   text-align: center;
   box-shadow: 0 0 10px #0f9;
@@ -326,7 +326,7 @@ footer {
   background-color: rgba(0,0,0,0.9);  
   z-index: 9999;
   
-  /* Empezamos fuera de pantalla, abajo */
+  
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
