@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  
- 
   // Validación de formulario
   $("#beta-form").on("submit", function (e) {
     e.preventDefault();
@@ -14,12 +12,15 @@ $(document).ready(function () {
       return;
     }
 
-    // Simular envío (aquí puedes conectar backend si tienes)
     $("#form-message").text("¡Gracias por registrarte a la beta!");
     this.reset();
   });
 
-   
+  // Menú hamburguesa
+  const toggleBtn = $("#menu-toggle");
+  const navLinks = $("#nav-links");
 
-
+  toggleBtn.on("click", function () {
+    navLinks.toggleClass("show");
+  });
 });
